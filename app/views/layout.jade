@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    block css
+      link(rel='stylesheet', href='//code.getmdl.io/1.2.1/material.yellow-blue.min.css')
+      link(rel='stylesheet', href='//fonts.googleapis.com/icon?family=Material+Icons')
+      link(rel='stylesheet', href='/components/owl.carousel/dist/assets/owl.carousel.min.css')
+      link(rel='stylesheet', href='/components/owl.carousel/dist/assets/owl.theme.default.min.css')
+      link(rel='stylesheet', href='/css/style.css')
+    block js
+      script(src="/components/jquery/dist/jquery.min.js")
+      script(src="/js/jquery.ba-throttle-debounce.min.js")
+      script(src="/components/owl.carousel/dist/owl.carousel.min.js")
+      script(src="/components/material-design-lite/material.min.js")
+      script(src="//cdn.pubnub.com/sdk/javascript/pubnub.4.1.1.min.js")
+      script(src="/js/app.js")
+      if ENV_DEVELOPMENT
+        script(src='http://192.168.0.102:35729/livereload.js')
+  body
+    block content
