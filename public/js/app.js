@@ -25,10 +25,8 @@ $(function() {
         $(slide).attr('data-hash', index);
     });
     var presenter = $('.owl-carousel').owlCarousel({
-        URLhashListener: true,
         items: 1,
         nav: true,
-        center: true,
         responsive: {
             0: {
                 items: 1
@@ -43,7 +41,7 @@ $(function() {
     });
 
     // Subscribe to slide change events
-    presenter.on('changed.owl.carousel', $.debounce(300, function(e) {
+    presenter.on('changed.owl.carousel', $.debounce(500, function(e) {
         window.pubnub.publish({
             channel: 'tro-presentation',
             message: {
